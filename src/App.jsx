@@ -14,7 +14,7 @@ export default function App() {
             Home
           </a>
           <a href="#features" className="hover:text-white">
-            Features
+            Nova website
           </a>
           <a href="#about" className="hover:text-white">
             About
