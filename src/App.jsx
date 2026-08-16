@@ -733,8 +733,112 @@ export default function App() {
 
       </section>
 
-      {/* Footer */}
-      
+
+      {/* ================= FOOTER ================= */}
+      <footer className="bg-slate-950 text-white px-6 md:px-10 py-12">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="grid md:grid-cols-4 gap-10">
+
+            <div>
+
+              <h2 className="text-2xl font-bold">
+                Nova<span className="text-indigo-400">.</span>
+              </h2>
+
+              <p className="text-slate-400 mt-4 leading-7 max-w-xs">
+                A modern workspace designed to help teams
+                build better things together.
+              </p>
+
+              <div className="flex gap-4 mt-6">
+
+                <a
+                  href="#"
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition"
+                >
+                  <FaGithub />
+                </a>
+
+                <a
+                  href="#"
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition"
+                >
+                  <FaTwitter />
+                </a>
+
+                <a
+                  href="#"
+                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition"
+                >
+                  <FaLinkedin />
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div>
+              <h4 className="font-semibold">
+                Product
+              </h4>
+
+              <div className="space-y-3 mt-5 text-sm text-slate-400">
+                <p className="hover:text-white cursor-pointer transition">Features</p>
+                <p className="hover:text-white cursor-pointer transition">Pricing</p>
+                <p className="hover:text-white cursor-pointer transition">Integrations</p>
+                <p className="hover:text-white cursor-pointer transition">Updates</p>
+              </div>
+            </div>
+
+
+            <div>
+              <h4 className="font-semibold">
+                Company
+              </h4>
+
+              <div className="space-y-3 mt-5 text-sm text-slate-400">
+                <p className="hover:text-white cursor-pointer transition">About</p>
+                <p className="hover:text-white cursor-pointer transition">Careers</p>
+                <p className="hover:text-white cursor-pointer transition">Contact</p>
+                <p className="hover:text-white cursor-pointer transition">Blog</p>
+              </div>
+            </div>
+
+
+            <div>
+              <h4 className="font-semibold">
+                Legal
+              </h4>
+
+              <div className="space-y-3 mt-5 text-sm text-slate-400">
+                <p className="hover:text-white cursor-pointer transition">Privacy</p>
+                <p className="hover:text-white cursor-pointer transition">Terms</p>
+                <p className="hover:text-white cursor-pointer transition">Security</p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div className="border-t border-white/10 mt-12 pt-7 text-sm text-slate-500 flex flex-col md:flex-row justify-between gap-3">
+
+            <p>
+              © 2026 Nova. All rights reserved.
+            </p>
+
+            <p>
+              Built with React & Tailwind CSS.
+            </p>
+
+          </div>
+
+        </div>
+
+      </footer>
+
     </div>
   );
 }
