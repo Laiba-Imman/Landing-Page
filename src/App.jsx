@@ -264,26 +264,7 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 px-6 md:px-16 py-8">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <h2 className="text-xl font-bold">
-            Nova<span className="text-indigo-400">.</span>
-          </h2>
-
-
-          <div className="flex gap-5 text-slate-400 text-sm">
-            <a href="#" className="hover:text-white">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white">
-              Terms
-            </a>
-            <a href="#" className="hover:text-white">
-              Contact
-            </a>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 }
