@@ -14,10 +14,10 @@ export default function App() {
             Home
           </a>
           <a href="#features" className="hover:text-white">
-            Nova website
+            Nova Features
           </a>
           <a href="#about" className="hover:text-white">
-            About
+            About Features 
           </a>
           <a href="#pricing" className="hover:text-white">
             Pricing
