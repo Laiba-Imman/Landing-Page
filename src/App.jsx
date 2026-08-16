@@ -679,7 +679,7 @@ export default function App() {
 
             <div className="mt-7 flex items-center gap-3">
 
-              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center text-white font-bold">
+              <div className="w-11 h-11 rounded-full bg-linear-to-br from-pink-500 to-orange-400 flex items-center justify-center text-white font-bold">
                 EW
               </div>
 
@@ -705,7 +705,7 @@ export default function App() {
       {/* ================= CTA ================= */}
       <section className="px-6 py-24 bg-white">
 
-        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 p-10 md:p-16 text-center text-white shadow-2xl shadow-indigo-200">
+        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-4xl bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500 p-10 md:p-16 text-center text-white shadow-2xl shadow-indigo-200">
 
           {/* Decorative circles */}
           <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/10 rounded-full blur-2xl" />
