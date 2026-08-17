@@ -13,56 +13,68 @@ import {
   FaGithub,
   FaTwitter,
   FaLinkedin,
+  FaCircle,
+  FaBars,
 } from "react-icons/fa";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-white overflow-hidden">
 
       {/* ================= NAVBAR ================= */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-200/70">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/70 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between">
 
           {/* Logo */}
-          <a href="#home" className="text-2xl font-bold tracking-tight">
-            Nova<span className="text-indigo-600">.</span>
+          <a
+            href="#home"
+            className="text-2xl font-bold tracking-tight"
+          >
+            Nova
+            <span className="text-indigo-400">.</span>
           </a>
 
-          {/* Links */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          {/* Navigation */}
+          <div className="hidden md:flex items-center gap-8 text-sm text-slate-400">
+
             <a
               href="#home"
-              className="hover:text-indigo-600 transition"
+              className="hover:text-white transition"
             >
               Home
             </a>
 
             <a
               href="#features"
-              className="hover:text-indigo-600 transition"
+              className="hover:text-white transition"
             >
               Features
             </a>
 
             <a
               href="#about"
-              className="hover:text-indigo-600 transition"
+              className="hover:text-white transition"
             >
               About
             </a>
 
             <a
-              href="#testimonials"
-              className="hover:text-indigo-600 transition"
+              href="#reviews"
+              className="hover:text-white transition"
             >
               Reviews
             </a>
+
           </div>
 
           {/* Button */}
-          <button className="hidden sm:flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:shadow-lg hover:shadow-indigo-200">
+          <button className="hidden sm:flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30">
             Get Started
             <FaArrowRight size={12} />
+          </button>
+
+          <button className="md:hidden text-slate-300">
+            <FaBars size={20} />
           </button>
 
         </div>
@@ -72,68 +84,96 @@ export default function App() {
       {/* ================= HERO ================= */}
       <section
         id="home"
-        className="relative pt-36 pb-24 md:pt-44 md:pb-32 px-6"
+        className="relative min-h-screen pt-36 pb-24 px-6 flex items-center"
       >
 
-        {/* Background blobs */}
-        <div className="absolute top-20 left-[-150px] w-80 h-80 bg-indigo-200/40 rounded-full blur-3xl" />
+        {/* Background Glow */}
+        <div className="absolute top-20 left-[-200px] w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px]" />
 
-        <div className="absolute top-40 right-[-150px] w-96 h-96 bg-purple-200/40 rounded-full blur-3xl" />
+        <div className="absolute top-40 right-[-200px] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px]" />
 
-        <div className="max-w-6xl mx-auto text-center relative">
+        <div className="absolute bottom-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-pink-600/10 rounded-full blur-[120px]" />
+
+
+        <div className="max-w-6xl mx-auto text-center relative z-10 w-full">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-sm font-semibold mb-7 shadow-sm">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm font-medium mb-8">
+
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+            </span>
+
             The future of productivity
+
           </div>
 
+
           {/* Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] max-w-5xl mx-auto">
-            Turn your ideas into
-            <span className="block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
-              something amazing.
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05]">
+
+            Build.
+            <span className="text-slate-500"> Create.</span>
+
+            <br />
+
+            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Grow.
             </span>
+
           </h1>
 
-          {/* Description */}
-          <p className="mt-7 text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-8">
-            Nova gives your team everything they need to plan,
-            create, collaborate and grow — all in one beautiful workspace.
+
+          <p className="max-w-2xl mx-auto mt-7 text-lg md:text-xl text-slate-400 leading-8">
+            Nova is a powerful workspace designed to help modern
+            teams manage projects, collaborate better and turn ideas
+            into reality.
           </p>
+
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
 
-            <button className="group flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-700 text-white px-7 py-4 rounded-xl font-semibold shadow-xl shadow-indigo-200 transition-all hover:-translate-y-1">
-              Get Started
-              <FaArrowRight className="group-hover:translate-x-1 transition" />
+            <button className="group flex items-center justify-center gap-3 bg-indigo-600 hover:bg-indigo-500 px-7 py-4 rounded-xl font-semibold shadow-xl shadow-indigo-600/20 transition-all hover:-translate-y-1">
+
+              Start Building
+
+              <FaArrowRight
+                className="group-hover:translate-x-1 transition"
+              />
+
             </button>
 
-            <button className="flex items-center justify-center gap-3 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 px-7 py-4 rounded-xl font-semibold shadow-sm transition-all hover:-translate-y-1">
-              <FaPlay size={13} />
-              See how it works
+
+            <button className="flex items-center justify-center gap-3 border border-white/10 bg-white/5 hover:bg-white/10 px-7 py-4 rounded-xl font-semibold transition-all hover:-translate-y-1">
+
+              <FaPlay size={12} />
+
+              Watch Demo
+
             </button>
 
           </div>
 
 
-          {/* ================= DASHBOARD CARD ================= */}
+          {/* ================= DASHBOARD ================= */}
           <div className="relative mt-20 max-w-5xl mx-auto">
 
-            {/* Floating card 1 */}
-            <div className="hidden md:flex absolute -left-12 top-20 z-20 bg-white rounded-2xl shadow-xl border border-slate-100 p-4 items-center gap-3 animate-[bounce_4s_ease-in-out_infinite]">
 
-              <div className="w-10 h-10 bg-green-100 text-green-600 rounded-xl flex items-center justify-center">
+            {/* Floating Growth Card */}
+            <div className="hidden md:flex absolute -left-14 top-20 z-20 bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 items-center gap-3 shadow-2xl shadow-indigo-500/10 animate-bounce">
+
+              <div className="w-11 h-11 rounded-xl bg-green-500/10 text-green-400 flex items-center justify-center">
                 <FaChartLine />
               </div>
 
               <div className="text-left">
-                <p className="text-xs text-slate-400">
-                  Growth
+                <p className="text-xs text-slate-500">
+                  Monthly Growth
                 </p>
 
-                <p className="font-bold">
+                <p className="font-bold text-green-400">
                   +28.4%
                 </p>
               </div>
@@ -141,16 +181,16 @@ export default function App() {
             </div>
 
 
-            {/* Floating card 2 */}
-            <div className="hidden md:flex absolute -right-10 bottom-20 z-20 bg-white rounded-2xl shadow-xl border border-slate-100 p-4 items-center gap-3 animate-[bounce_5s_ease-in-out_infinite]">
+            {/* Floating Users Card */}
+            <div className="hidden md:flex absolute -right-12 bottom-20 z-20 bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 items-center gap-3 shadow-2xl shadow-purple-500/10 animate-pulse">
 
-              <div className="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center">
+              <div className="w-11 h-11 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
                 <FaUsers />
               </div>
 
               <div className="text-left">
-                <p className="text-xs text-slate-400">
-                  New users
+                <p className="text-xs text-slate-500">
+                  New Users
                 </p>
 
                 <p className="font-bold">
@@ -161,35 +201,40 @@ export default function App() {
             </div>
 
 
-            {/* Main dashboard */}
-            <div className="bg-white rounded-3xl border border-slate-200 shadow-2xl shadow-slate-200/70 p-3 md:p-5">
+            {/* Main Dashboard */}
+            <div className="relative bg-gradient-to-br from-white/10 to-white/[0.02] border border-white/10 rounded-3xl p-2 md:p-4 shadow-2xl shadow-indigo-500/10">
 
-              <div className="rounded-2xl bg-slate-50 border border-slate-200 p-5 md:p-8">
+              <div className="bg-slate-900/90 rounded-2xl border border-white/10 p-5 md:p-8">
 
-                {/* Dashboard top */}
-                <div className="flex items-center justify-between mb-8">
+
+                {/* Top */}
+                <div className="flex justify-between items-center mb-8">
 
                   <div className="flex items-center gap-3">
 
-                    <div className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+
                       <FaLayerGroup />
+
                     </div>
 
                     <div className="text-left">
+
                       <h3 className="font-bold">
                         Overview
                       </h3>
 
-                      <p className="text-xs text-slate-400">
+                      <p className="text-xs text-slate-500">
                         Your workspace
                       </p>
+
                     </div>
 
                   </div>
 
-                  <div className="hidden sm:block text-xs text-slate-400">
+                  <span className="text-xs text-slate-500">
                     Last 30 days
-                  </div>
+                  </span>
 
                 </div>
 
@@ -197,17 +242,18 @@ export default function App() {
                 {/* Stats */}
                 <div className="grid md:grid-cols-3 gap-5">
 
+
                   {/* Card 1 */}
-                  <div className="group bg-white rounded-2xl p-6 border border-slate-200 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-indigo-100">
+                  <div className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-left hover:bg-white/[0.06] hover:border-indigo-500/40 hover:-translate-y-2 transition-all duration-300">
 
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between">
 
-                      <p className="text-sm text-slate-500">
+                      <p className="text-sm text-slate-400">
                         Total Projects
                       </p>
 
-                      <div className="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition">
-                        <FaLayerGroup size={15} />
+                      <div className="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center group-hover:scale-110 transition">
+                        <FaLayerGroup size={14} />
                       </div>
 
                     </div>
@@ -216,7 +262,7 @@ export default function App() {
                       128
                     </h3>
 
-                    <p className="text-sm text-green-500 mt-2">
+                    <p className="text-sm text-green-400 mt-2">
                       +24% this month
                     </p>
 
@@ -224,16 +270,16 @@ export default function App() {
 
 
                   {/* Card 2 */}
-                  <div className="group bg-white rounded-2xl p-6 border border-slate-200 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-purple-100">
+                  <div className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-left hover:bg-white/[0.06] hover:border-purple-500/40 hover:-translate-y-2 transition-all duration-300">
 
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between">
 
-                      <p className="text-sm text-slate-500">
+                      <p className="text-sm text-slate-400">
                         Team Members
                       </p>
 
-                      <div className="w-9 h-9 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center group-hover:scale-110 transition">
-                        <FaUsers size={15} />
+                      <div className="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center group-hover:scale-110 transition">
+                        <FaUsers size={14} />
                       </div>
 
                     </div>
@@ -242,7 +288,7 @@ export default function App() {
                       48
                     </h3>
 
-                    <p className="text-sm text-green-500 mt-2">
+                    <p className="text-sm text-green-400 mt-2">
                       +12% this month
                     </p>
 
@@ -250,16 +296,16 @@ export default function App() {
 
 
                   {/* Card 3 */}
-                  <div className="group bg-white rounded-2xl p-6 border border-slate-200 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100">
+                  <div className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-left hover:bg-white/[0.06] hover:border-pink-500/40 hover:-translate-y-2 transition-all duration-300">
 
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between">
 
-                      <p className="text-sm text-slate-500">
+                      <p className="text-sm text-slate-400">
                         Growth
                       </p>
 
-                      <div className="w-9 h-9 rounded-lg bg-pink-50 text-pink-600 flex items-center justify-center group-hover:scale-110 transition">
-                        <FaChartLine size={15} />
+                      <div className="w-9 h-9 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center group-hover:scale-110 transition">
+                        <FaChartLine size={14} />
                       </div>
 
                     </div>
@@ -268,7 +314,7 @@ export default function App() {
                       86%
                     </h3>
 
-                    <p className="text-sm text-green-500 mt-2">
+                    <p className="text-sm text-green-400 mt-2">
                       +18% this month
                     </p>
 
@@ -277,12 +323,13 @@ export default function App() {
                 </div>
 
 
-                {/* Fake chart */}
-                <div className="mt-6 bg-white rounded-2xl border border-slate-200 p-6">
+                {/* Chart */}
+                <div className="mt-6 bg-white/[0.03] border border-white/10 rounded-2xl p-6">
 
-                  <div className="flex justify-between mb-6">
+                  <div className="flex justify-between items-center mb-7">
 
-                    <div>
+                    <div className="text-left">
+
                       <p className="text-sm text-slate-500">
                         Performance
                       </p>
@@ -290,23 +337,30 @@ export default function App() {
                       <p className="text-2xl font-bold mt-1">
                         $24,580
                       </p>
+
                     </div>
 
-                    <span className="text-sm text-green-500 font-semibold">
+                    <span className="text-sm text-green-400 font-semibold">
                       +18.6%
                     </span>
 
                   </div>
 
-                  <div className="flex items-end gap-2 h-28">
 
-                    {[35, 50, 42, 68, 55, 75, 65, 90, 72, 100, 82, 95].map(
+                  {/* Bars */}
+                  <div className="flex items-end gap-2 h-32">
+
+                    {[35, 50, 42, 65, 55, 75, 60, 90, 72, 100, 82, 95].map(
                       (height, index) => (
+
                         <div
                           key={index}
-                          className="flex-1 bg-gradient-to-t from-indigo-600 to-purple-400 rounded-t-lg transition-all duration-500 hover:opacity-70"
-                          style={{ height: `${height}%` }}
+                          className="flex-1 bg-gradient-to-t from-indigo-600 via-purple-500 to-pink-400 rounded-t-md hover:opacity-70 transition-all duration-300"
+                          style={{
+                            height: `${height}%`,
+                          }}
                         />
+
                       )
                     )}
 
@@ -321,17 +375,18 @@ export default function App() {
           </div>
 
         </div>
+
       </section>
 
 
-      {/* ================= LOGOS ================= */}
-      <section className="border-y border-slate-200 bg-white py-8 px-6">
+      {/* ================= TRUST ================= */}
+      <section className="border-y border-white/10 bg-white/[0.02] py-10 px-6">
 
-        <p className="text-center text-xs font-semibold text-slate-400 uppercase tracking-widest mb-6">
+        <p className="text-center text-xs text-slate-600 font-semibold uppercase tracking-[0.25em] mb-7">
           Trusted by modern teams
         </p>
 
-        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-10 md:gap-16 text-slate-400 font-bold text-lg">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-10 md:gap-16 text-slate-600 font-bold text-lg">
 
           <span>VERCEL</span>
           <span>Stripe</span>
@@ -347,27 +402,33 @@ export default function App() {
       {/* ================= FEATURES ================= */}
       <section
         id="features"
-        className="px-6 py-24 md:py-32 bg-slate-50"
+        className="relative px-6 py-24 md:py-32"
       >
 
-        <div className="max-w-6xl mx-auto">
+        <div className="absolute left-0 top-40 w-80 h-80 bg-indigo-600/10 rounded-full blur-[100px]" />
+
+        <div className="max-w-6xl mx-auto relative">
+
 
           <div className="max-w-2xl">
 
-            <span className="text-indigo-600 font-bold text-sm">
+            <span className="text-indigo-400 font-bold text-sm tracking-wider">
               POWERFUL FEATURES
             </span>
 
-            <h2 className="text-4xl md:text-5xl font-bold mt-3 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-bold mt-3">
+
               Everything you need.
-              <span className="text-slate-400">
+
+              <span className="text-slate-600">
                 {" "}Nothing you don't.
               </span>
+
             </h2>
 
-            <p className="text-slate-500 mt-5 text-lg leading-8">
-              Simple, powerful tools designed to help you work smarter
-              and get more done.
+            <p className="text-slate-400 mt-5 text-lg leading-8">
+              Powerful tools wrapped in a simple and beautiful
+              experience.
             </p>
 
           </div>
@@ -377,72 +438,114 @@ export default function App() {
 
 
             {/* Feature 1 */}
-            <div className="group bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:shadow-indigo-100 hover:-translate-y-3 transition-all duration-500">
+            <div className="group relative overflow-hidden bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:border-indigo-500/40 hover:-translate-y-3 transition-all duration-500">
 
-              <div className="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl group-hover:scale-110 group-hover:rotate-6 transition-all">
-                <FaBolt />
-              </div>
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-indigo-600/20 rounded-full blur-3xl group-hover:bg-indigo-600/30 transition" />
 
-              <h3 className="text-xl font-bold mt-7">
-                Lightning Fast
-              </h3>
+              <div className="relative">
 
-              <p className="text-slate-500 mt-3 leading-7">
-                Everything is optimized for speed so your team can
-                focus on meaningful work.
-              </p>
+                <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
 
-              <div className="mt-6 flex items-center gap-2 text-indigo-600 text-sm font-semibold">
-                Learn more
-                <FaArrowRight size={12} className="group-hover:translate-x-1 transition" />
+                  <FaBolt />
+
+                </div>
+
+                <h3 className="text-xl font-bold mt-7">
+                  Lightning Fast
+                </h3>
+
+                <p className="text-slate-400 mt-3 leading-7">
+                  Everything is optimized for speed so your
+                  team can focus on meaningful work.
+                </p>
+
+                <div className="flex items-center gap-2 text-indigo-400 text-sm font-semibold mt-6">
+
+                  Learn more
+
+                  <FaArrowRight
+                    size={11}
+                    className="group-hover:translate-x-1 transition"
+                  />
+
+                </div>
+
               </div>
 
             </div>
 
 
             {/* Feature 2 */}
-            <div className="group bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:shadow-purple-100 hover:-translate-y-3 transition-all duration-500">
+            <div className="group relative overflow-hidden bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:border-purple-500/40 hover:-translate-y-3 transition-all duration-500">
 
-              <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-xl group-hover:scale-110 group-hover:rotate-6 transition-all">
-                <FaLock />
-              </div>
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-purple-600/20 rounded-full blur-3xl" />
 
-              <h3 className="text-xl font-bold mt-7">
-                Secure & Reliable
-              </h3>
+              <div className="relative">
 
-              <p className="text-slate-500 mt-3 leading-7">
-                Your data stays protected with modern security
-                and reliable infrastructure.
-              </p>
+                <div className="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
 
-              <div className="mt-6 flex items-center gap-2 text-purple-600 text-sm font-semibold">
-                Learn more
-                <FaArrowRight size={12} className="group-hover:translate-x-1 transition" />
+                  <FaLock />
+
+                </div>
+
+                <h3 className="text-xl font-bold mt-7">
+                  Secure & Reliable
+                </h3>
+
+                <p className="text-slate-400 mt-3 leading-7">
+                  Your data stays protected with modern
+                  security and reliable infrastructure.
+                </p>
+
+                <div className="flex items-center gap-2 text-purple-400 text-sm font-semibold mt-6">
+
+                  Learn more
+
+                  <FaArrowRight
+                    size={11}
+                    className="group-hover:translate-x-1 transition"
+                  />
+
+                </div>
+
               </div>
 
             </div>
 
 
             {/* Feature 3 */}
-            <div className="group bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-2xl hover:shadow-pink-100 hover:-translate-y-3 transition-all duration-500">
+            <div className="group relative overflow-hidden bg-white/[0.03] border border-white/10 rounded-3xl p-8 hover:border-pink-500/40 hover:-translate-y-3 transition-all duration-500">
 
-              <div className="w-14 h-14 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-xl group-hover:scale-110 group-hover:rotate-6 transition-all">
-                <FaRocket />
-              </div>
+              <div className="absolute -right-10 -top-10 w-32 h-32 bg-pink-600/20 rounded-full blur-3xl" />
 
-              <h3 className="text-xl font-bold mt-7">
-                Easy to Use
-              </h3>
+              <div className="relative">
 
-              <p className="text-slate-500 mt-3 leading-7">
-                A clean interface that anyone can understand
-                without a complicated learning curve.
-              </p>
+                <div className="w-14 h-14 rounded-2xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
 
-              <div className="mt-6 flex items-center gap-2 text-pink-600 text-sm font-semibold">
-                Learn more
-                <FaArrowRight size={12} className="group-hover:translate-x-1 transition" />
+                  <FaRocket />
+
+                </div>
+
+                <h3 className="text-xl font-bold mt-7">
+                  Easy to Use
+                </h3>
+
+                <p className="text-slate-400 mt-3 leading-7">
+                  A clean interface that anyone can understand
+                  without a complicated learning curve.
+                </p>
+
+                <div className="flex items-center gap-2 text-pink-400 text-sm font-semibold mt-6">
+
+                  Learn more
+
+                  <FaArrowRight
+                    size={11}
+                    className="group-hover:translate-x-1 transition"
+                  />
+
+                </div>
+
               </div>
 
             </div>
@@ -455,66 +558,69 @@ export default function App() {
 
 
       {/* ================= ABOUT ================= */}
-      <section id="about" className="px-6 py-24 md:py-32 bg-white">
+      <section
+        id="about"
+        className="px-6 py-24 md:py-32 bg-white/[0.02] border-y border-white/5"
+      >
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
+
           <div>
 
-            <span className="text-indigo-600 font-bold text-sm">
+            <span className="text-indigo-400 font-bold text-sm">
               WHY NOVA?
             </span>
 
             <h2 className="text-4xl md:text-5xl font-bold mt-3 leading-tight">
+
               Work smarter.
+
               <br />
-              <span className="text-slate-400">
+
+              <span className="text-slate-600">
                 Not harder.
               </span>
+
             </h2>
 
-            <p className="text-slate-500 mt-6 leading-8 text-lg">
-              Nova brings your projects, people and ideas together
-              in one beautifully designed workspace.
+            <p className="text-slate-400 mt-6 text-lg leading-8">
+              Nova brings your projects, people and ideas
+              together in one powerful workspace.
             </p>
 
 
             <div className="space-y-4 mt-8">
 
-              <div className="flex gap-3 items-center">
-                <div className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                  <FaCheck size={11} />
+              {[
+                "Simple project management",
+                "Real-time team collaboration",
+                "Powerful analytics",
+              ].map((item) => (
+
+                <div
+                  key={item}
+                  className="flex items-center gap-3"
+                >
+
+                  <div className="w-6 h-6 rounded-full bg-green-500/10 text-green-400 flex items-center justify-center">
+
+                    <FaCheck size={10} />
+
+                  </div>
+
+                  <span className="text-slate-300">
+                    {item}
+                  </span>
+
                 </div>
 
-                <span className="text-slate-600">
-                  Simple project management
-                </span>
-              </div>
-
-              <div className="flex gap-3 items-center">
-                <div className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                  <FaCheck size={11} />
-                </div>
-
-                <span className="text-slate-600">
-                  Real-time team collaboration
-                </span>
-              </div>
-
-              <div className="flex gap-3 items-center">
-                <div className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                  <FaCheck size={11} />
-                </div>
-
-                <span className="text-slate-600">
-                  Powerful analytics
-                </span>
-              </div>
+              ))}
 
             </div>
 
 
-            <button className="mt-9 bg-slate-900 text-white px-6 py-3.5 rounded-xl font-semibold hover:bg-slate-800 transition">
+            <button className="mt-9 bg-white text-slate-950 px-6 py-3.5 rounded-xl font-semibold hover:bg-indigo-50 hover:-translate-y-1 transition">
               Explore Nova
             </button>
 
@@ -524,40 +630,55 @@ export default function App() {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-5">
 
-            <div className="group bg-indigo-50 border border-indigo-100 p-7 rounded-3xl hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-100">
-              <h3 className="text-4xl font-bold text-indigo-600">
+            <div className="bg-indigo-500/10 border border-indigo-500/20 p-7 rounded-3xl hover:-translate-y-2 transition duration-300">
+
+              <h3 className="text-4xl font-bold text-indigo-400">
                 10K+
               </h3>
-              <p className="text-slate-500 mt-2">
+
+              <p className="text-slate-400 mt-2">
                 Active Users
               </p>
+
             </div>
 
-            <div className="group bg-purple-50 border border-purple-100 p-7 rounded-3xl mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-purple-100">
-              <h3 className="text-4xl font-bold text-purple-600">
+
+            <div className="bg-purple-500/10 border border-purple-500/20 p-7 rounded-3xl mt-8 hover:-translate-y-2 transition duration-300">
+
+              <h3 className="text-4xl font-bold text-purple-400">
                 99.9%
               </h3>
-              <p className="text-slate-500 mt-2">
+
+              <p className="text-slate-400 mt-2">
                 Uptime
               </p>
+
             </div>
 
-            <div className="group bg-pink-50 border border-pink-100 p-7 rounded-3xl hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-pink-100">
-              <h3 className="text-4xl font-bold text-pink-600">
+
+            <div className="bg-pink-500/10 border border-pink-500/20 p-7 rounded-3xl hover:-translate-y-2 transition duration-300">
+
+              <h3 className="text-4xl font-bold text-pink-400">
                 50+
               </h3>
-              <p className="text-slate-500 mt-2">
+
+              <p className="text-slate-400 mt-2">
                 Countries
               </p>
+
             </div>
 
-            <div className="group bg-cyan-50 border border-cyan-100 p-7 rounded-3xl mt-8 hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-100">
-              <h3 className="text-4xl font-bold text-cyan-600">
+
+            <div className="bg-cyan-500/10 border border-cyan-500/20 p-7 rounded-3xl mt-8 hover:-translate-y-2 transition duration-300">
+
+              <h3 className="text-4xl font-bold text-cyan-400">
                 24/7
               </h3>
-              <p className="text-slate-500 mt-2">
+
+              <p className="text-slate-400 mt-2">
                 Support
               </p>
+
             </div>
 
           </div>
@@ -569,13 +690,13 @@ export default function App() {
 
       {/* ================= TESTIMONIALS ================= */}
       <section
-        id="testimonials"
-        className="px-6 py-24 md:py-32 bg-slate-50"
+        id="reviews"
+        className="px-6 py-24 md:py-32"
       >
 
         <div className="text-center max-w-2xl mx-auto">
 
-          <span className="text-indigo-600 font-bold text-sm">
+          <span className="text-indigo-400 font-bold text-sm">
             TESTIMONIALS
           </span>
 
@@ -583,8 +704,8 @@ export default function App() {
             Loved by productive people.
           </h2>
 
-          <p className="text-slate-500 mt-5">
-            See why teams are choosing Nova to simplify their workflow.
+          <p className="text-slate-400 mt-5">
+            See why teams choose Nova to simplify their workflow.
           </p>
 
         </div>
@@ -593,109 +714,71 @@ export default function App() {
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-14">
 
 
-          {/* Review 1 */}
-          <div className="group bg-white border border-slate-200 p-8 rounded-3xl hover:-translate-y-3 hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500">
+          {[
+            {
+              name: "Sarah Khan",
+              role: "Product Designer",
+              initials: "SK",
+              text: "Nova completely changed the way our team works. Everything feels much more organized now.",
+            },
+            {
+              name: "Ali Ahmed",
+              role: "Developer",
+              initials: "AA",
+              text: "The interface is beautiful and incredibly easy to use. I highly recommend Nova.",
+            },
+            {
+              name: "Emma Wilson",
+              role: "Founder",
+              initials: "EW",
+              text: "We save hours every week because everything we need is finally in one beautiful place.",
+            },
+          ].map((review, index) => (
 
-            <div className="flex gap-1 text-yellow-400">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <FaStar key={star} size={14} />
-              ))}
-            </div>
+            <div
+              key={review.name}
+              className="group bg-white/[0.03] border border-white/10 p-8 rounded-3xl hover:-translate-y-3 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500"
+            >
 
-            <p className="text-slate-600 mt-6 leading-7">
-              "Nova completely changed the way our team works.
-              Everything feels much more organized now."
-            </p>
+              <div className="flex gap-1 text-yellow-400">
 
-            <div className="mt-7 flex items-center gap-3">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <FaStar key={star} size={13} />
+                ))}
 
-              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold">
-                SK
               </div>
 
-              <div>
-                <h4 className="font-semibold">
-                  Sarah Khan
-                </h4>
 
-                <p className="text-slate-400 text-sm">
-                  Product Designer
-                </p>
-              </div>
-
-            </div>
-
-          </div>
+              <p className="text-slate-300 mt-6 leading-7">
+                "{review.text}"
+              </p>
 
 
-          {/* Review 2 */}
-          <div className="group bg-white border border-slate-200 p-8 rounded-3xl hover:-translate-y-3 hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500">
+              <div className="mt-7 flex items-center gap-3">
 
-            <div className="flex gap-1 text-yellow-400">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <FaStar key={star} size={14} />
-              ))}
-            </div>
+                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
 
-            <p className="text-slate-600 mt-6 leading-7">
-              "The interface is beautiful and incredibly easy to use.
-              I highly recommend it to every growing team."
-            </p>
+                  {review.initials}
 
-            <div className="mt-7 flex items-center gap-3">
+                </div>
 
-              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
-                AA
-              </div>
+                <div>
 
-              <div>
-                <h4 className="font-semibold">
-                  Ali Ahmed
-                </h4>
+                  <h4 className="font-semibold">
+                    {review.name}
+                  </h4>
 
-                <p className="text-slate-400 text-sm">
-                  Developer
-                </p>
+                  <p className="text-slate-500 text-sm">
+                    {review.role}
+                  </p>
+
+                </div>
+
               </div>
 
             </div>
 
-          </div>
-
-
-          {/* Review 3 */}
-          <div className="group bg-white border border-slate-200 p-8 rounded-3xl hover:-translate-y-3 hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500">
-
-            <div className="flex gap-1 text-yellow-400">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <FaStar key={star} size={14} />
-              ))}
-            </div>
-
-            <p className="text-slate-600 mt-6 leading-7">
-              "We save hours every week because everything we need
-              is finally in one beautiful place."
-            </p>
-
-            <div className="mt-7 flex items-center gap-3">
-
-              <div className="w-11 h-11 rounded-full bg-linear-to-br from-pink-500 to-orange-400 flex items-center justify-center text-white font-bold">
-                EW
-              </div>
-
-              <div>
-                <h4 className="font-semibold">
-                  Emma Wilson
-                </h4>
-
-                <p className="text-slate-400 text-sm">
-                  Founder
-                </p>
-              </div>
-
-            </div>
-
-          </div>
+          ))}
 
         </div>
 
@@ -703,14 +786,15 @@ export default function App() {
 
 
       {/* ================= CTA ================= */}
-      <section className="px-6 py-24 bg-white">
+      <section className="px-6 py-24">
 
-        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-4xl bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500 p-10 md:p-16 text-center text-white shadow-2xl shadow-indigo-200">
+        <div className="relative overflow-hidden max-w-5xl mx-auto rounded-[2rem] bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-10 md:p-16 text-center shadow-2xl shadow-indigo-500/20">
 
-          {/* Decorative circles */}
-          <div className="absolute -top-20 -left-20 w-60 h-60 bg-white/10 rounded-full blur-2xl" />
+          {/* Glow */}
+          <div className="absolute -top-32 -left-32 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
 
-          <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-white/10 rounded-full blur-2xl" />
+          <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
+
 
           <div className="relative">
 
@@ -723,8 +807,14 @@ export default function App() {
               to work smarter and move faster.
             </p>
 
-            <button className="mt-9 bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 hover:-translate-y-1 transition-all shadow-lg">
+            <button className="group mt-9 bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 hover:-translate-y-1 transition-all shadow-xl">
+
               Start for Free
+
+              <FaArrowRight
+                className="inline ml-2 group-hover:translate-x-1 transition"
+              />
+
             </button>
 
           </div>
@@ -735,42 +825,44 @@ export default function App() {
 
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-slate-950 text-white px-6 md:px-10 py-12">
+      <footer className="border-t border-white/10 bg-black/30 px-6 md:px-10 py-12">
 
         <div className="max-w-7xl mx-auto">
 
           <div className="grid md:grid-cols-4 gap-10">
 
+            {/* Brand */}
             <div>
 
               <h2 className="text-2xl font-bold">
                 Nova<span className="text-indigo-400">.</span>
               </h2>
 
-              <p className="text-slate-400 mt-4 leading-7 max-w-xs">
+              <p className="text-slate-500 mt-4 leading-7 max-w-xs">
                 A modern workspace designed to help teams
                 build better things together.
               </p>
 
-              <div className="flex gap-4 mt-6">
+
+              <div className="flex gap-3 mt-6">
 
                 <a
                   href="#"
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-500 transition"
                 >
                   <FaGithub />
                 </a>
 
                 <a
                   href="#"
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-500 transition"
                 >
                   <FaTwitter />
                 </a>
 
                 <a
                   href="#"
-                  className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-indigo-600 transition"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-indigo-600 hover:border-indigo-500 transition"
                 >
                   <FaLinkedin />
                 </a>
@@ -780,50 +872,96 @@ export default function App() {
             </div>
 
 
+            {/* Product */}
             <div>
+
               <h4 className="font-semibold">
                 Product
               </h4>
 
-              <div className="space-y-3 mt-5 text-sm text-slate-400">
-                <p className="hover:text-white cursor-pointer transition">Features</p>
-                <p className="hover:text-white cursor-pointer transition">Pricing</p>
-                <p className="hover:text-white cursor-pointer transition">Integrations</p>
-                <p className="hover:text-white cursor-pointer transition">Updates</p>
+              <div className="space-y-3 mt-5 text-sm text-slate-500">
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Features
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Pricing
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Integrations
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Updates
+                </p>
+
               </div>
+
             </div>
 
 
+            {/* Company */}
             <div>
+
               <h4 className="font-semibold">
                 Company
               </h4>
 
-              <div className="space-y-3 mt-5 text-sm text-slate-400">
-                <p className="hover:text-white cursor-pointer transition">About</p>
-                <p className="hover:text-white cursor-pointer transition">Careers</p>
-                <p className="hover:text-white cursor-pointer transition">Contact</p>
-                <p className="hover:text-white cursor-pointer transition">Blog</p>
+              <div className="space-y-3 mt-5 text-sm text-slate-500">
+
+                <p className="hover:text-white cursor-pointer transition">
+                  About
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Careers
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Contact
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Blog
+                </p>
+
               </div>
+
             </div>
 
 
+            {/* Legal */}
             <div>
+
               <h4 className="font-semibold">
                 Legal
               </h4>
 
-              <div className="space-y-3 mt-5 text-sm text-slate-400">
-                <p className="hover:text-white cursor-pointer transition">Privacy</p>
-                <p className="hover:text-white cursor-pointer transition">Terms</p>
-                <p className="hover:text-white cursor-pointer transition">Security</p>
+              <div className="space-y-3 mt-5 text-sm text-slate-500">
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Privacy
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Terms
+                </p>
+
+                <p className="hover:text-white cursor-pointer transition">
+                  Security
+                </p>
+
               </div>
+
             </div>
 
           </div>
 
 
-          <div className="border-t border-white/10 mt-12 pt-7 text-sm text-slate-500 flex flex-col md:flex-row justify-between gap-3">
+          {/* Bottom */}
+          <div className="border-t border-white/10 mt-12 pt-7 flex flex-col md:flex-row justify-between gap-3 text-sm text-slate-600">
 
             <p>
               © 2026 Nova. All rights reserved.
